@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import './FilmItem.css';
 function FilmItem(props) {
   let id = 1;
@@ -19,13 +20,14 @@ function FilmItem(props) {
   };
     fetchData();
   }, [id]);
-
+const editLink = `/edit/${props.id}`;
   return (
     <div>
       <div className="filmDisplay">
        <div>
         <h1>{loadedFilms.filmTitle} ({props.id})</h1>
         <p>{loadedFilms.filmDescription}</p>
+        <p> <Link to={editLink}>Edit</Link></p>
         </div>
        <div><img
           src={"./images/" + loadedFilms.filmImage}

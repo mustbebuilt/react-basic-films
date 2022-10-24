@@ -1,10 +1,16 @@
-import FilmList from "./components/FilmList";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import EditFilmPage from "./pages/EditFilmPage";
 function App() {
   return (
-    <div className="container">
-      <h1>My Films</h1>
-      <FilmList></FilmList>
-    </div>
+    <BrowserRouter>
+     <Routes>
+      <Route path='/' element={<Layout />}></Route>
+      <Route path='/edit/:id' element={<EditFilmPage />}></Route>
+    </Routes>
+    </BrowserRouter>
+
   );
 }
 

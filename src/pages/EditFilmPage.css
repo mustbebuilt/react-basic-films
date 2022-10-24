@@ -1,0 +1,17 @@
+.container{
+    max-width: 600px;
+    margin:auto;
+}
+.container>form>div{
+    padding:10px;
+}
+label{
+    display:block;
+}
+input, textarea{
+    padding:5px;
+    width:400px;
+}
+button{
+    margin-top:20px;
+}
