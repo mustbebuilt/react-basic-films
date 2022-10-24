@@ -1,0 +1,11 @@
+.container{
+    width:100%;
+    max-width: 1200px;
+    margin:auto;
+}
+main{
+    display:flex;
+}
+main>div{
+    flex:1 1 50%;
+}

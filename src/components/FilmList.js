@@ -1,8 +1,8 @@
 import FilmItem from "./FilmItem";
 import { useEffect, useState } from "react";
+import './FilmList.css';
 function FilmList() {
   const api = "https://mustbebuilt.co.uk/SHU/films-api/api.php";
-  const [isLoading, setIsLoading] = useState(false);
   const [loadedFilms, setLoadedFilms] = useState([]);
   const [currentFilm, setCurrentFilm] = useState(0);
 
@@ -26,7 +26,7 @@ function FilmList() {
   };
 
   return (
-    <div>
+    <main>
       <div>
         {loadedFilms.map((film) => (
           <div key={film.filmID}>
@@ -39,10 +39,9 @@ function FilmList() {
         ))}
       </div>
       <div>
-        <p>{currentFilm}</p>
         <FilmItem id={currentFilm}></FilmItem>
       </div>
-    </div>
+    </main>
   );
 }
 export default FilmList;

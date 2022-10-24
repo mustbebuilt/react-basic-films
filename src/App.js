@@ -1,7 +1,7 @@
 import FilmList from "./components/FilmList";
 function App() {
   return (
-    <div>
+    <div className="container">
       <h1>My Films</h1>
       <FilmList></FilmList>
     </div>

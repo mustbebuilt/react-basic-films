@@ -1,0 +1,15 @@
+main{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    margin:auto;
+}
+main>div:first-child{
+
+    flex:0 0 25%;
+    height: 400px;
+    overflow: scroll;
+}
+main>div{
+        border: 1px solid #ccc;
+        padding: 20px;
+}
